@@ -1,0 +1,174 @@
+.smaller{
+    font-size: smaller;
+}
+
+svg{
+    margin-right: 5px;
+}
+
+.resources-header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.resources-header::before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #242424cc;
+}
+
+.resources-header *{
+    color: white;
+}
+
+.resources-header .image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -5;
+}
+
+
+.resources-header .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.resources-header .content{
+    width: 80%;
+    height: 80%;
+    min-width: 300px;
+    margin: auto;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-areas: 
+    'site-title'
+    'nav'
+    '.'
+    'post-title'
+    'post-meta';
+
+}
+
+.resources-header .content .site-title{
+    grid-area: site-title;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+.resources-header .conent .resources-nav{
+    grid-area: nav;
+}
+
+.resources-header .content .resources-nav ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin:0;
+}
+
+.resources-header .content .resources-nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    padding-right: 1rem;
+}
+
+
+.resources-header .content .resources-nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.resources-header .content .post-title{
+    grid-area: post-title;
+}
+
+.post-meta{
+    grid-area: post-meta;
+    display: flex;
+    align-items: center;
+    
+}
+
+.post-meta span{
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+/*
+==================================
+    Resources - Content
+==================================
+*/
+
+.resources-content{
+    width: 70%;
+    min-width: 300px;
+    margin: 3rem auto;
+}
+
+.resources-content .resource-download{
+    grid-area: post-meta;
+    display: flex;
+    align-items: center;
+    
+}
+
+.resources-content .resource-download span{
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+/*
+==================================
+    Resources - Archive
+==================================
+*/
+
+.resources-archive{
+    width: 100%;
+    padding: 0;
+    margin-bottom: 3rem;
+
+    display: grid;
+    grid-template-columns: 25% auto;
+    gap: 2rem;
+}
+
+.resources-archive .image{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-position: center;
+    object-fit: cover
+}
+
+.resources-archive .image img{
+    width: 100%;
+    height: 100%;
+    
+}
+
