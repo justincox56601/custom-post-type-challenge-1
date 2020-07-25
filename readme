@@ -1,0 +1,8 @@
+This is the TwentyNineteen theme from Wordpress with the 'resources' custom post type already integrated.
+
+Functions.php
+The whole project is integrated in the functions.php file at the bottom with:
+    include get_template_directory() . '/resources/resources-cpt.php';
+    $ResourcesCPT = new ResourcesCPT();
+
+The rest of the code is found in the resources folder.
