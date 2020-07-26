@@ -332,7 +332,7 @@ class ResourcesCPT{
         //custom query for the archive page
         $args = array(
             'post_type' =>'resources',
-            'posts_per_page' => 3,
+            'posts_per_page' => 10,
             's' => $search,
             'paged' => get_query_var('paged', 1),
         );
