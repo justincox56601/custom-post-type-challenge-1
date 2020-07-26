@@ -121,7 +121,7 @@ class ResourcesCPT{
         //registers the custom meta boxes for the resource custom post type.  
         foreach($this->meta_boxes as $mb){
             extract($mb);
-            add_meta_box($id, $title, $callback, NULL, 'side', 'high', $mb);
+            add_meta_box($id, $title, $callback, 'resources', 'side', 'high', $mb);
         }
 
             
