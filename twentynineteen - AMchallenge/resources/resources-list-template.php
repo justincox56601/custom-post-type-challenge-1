@@ -1,9 +1,28 @@
 <?php
 $rcpt = new ResourcesCPT();
 $r_args = array();
-if($_GET['topic']){$r_args['topic'] = sanitize_text_field($_GET['topic']);}
-if($_GET['audience']){$r_args['audience'] = sanitize_text_field($_GET['audience']);}
-if($_GET['search']){$r_args['search'] = sanitize_text_field($_GET['search']);}
+
+// check  get and cookie variables for the form fields
+if(isset($_GET['topic'])){
+    $r_args['topic'] = sanitize_text_field($_GET['topic']);
+    setcookie('r_topic', $r_args['topic'], time() + 60*60*24, '/resources');
+}elseif(isset($_COOKIE['r_topic'])){
+    $r_args['topic'] = $_COOKIE['r_topic'];
+}
+
+if(isset($_GET['audience'])){
+    $r_args['audience'] = sanitize_text_field($_GET['audience']);
+    setcookie('r_audience', $r_args['audience'], time() + 60*60*24, '/resources');
+}elseif(isset($_COOKIE['r_topic'])){
+    $r_args['audience'] = $_COOKIE['r_audience'];
+}
+
+if(isset($_GET['search'])){
+    $r_args['search'] = sanitize_text_field($_GET['search']);
+    setcookie('r_search', $r_args['search'], time() + 60*60*24, '/resources');
+}elseif(isset($_COOKIE['r_search'])){
+    $r_args['search'] = $_COOKIE['r_search'];
+}
 
 get_header(); //use the standard theme header
 $rcpt->archive_search($r_args);
